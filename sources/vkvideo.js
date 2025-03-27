@@ -80,7 +80,7 @@
 		
 		var name="";
 		try {
-			name = escapeHtml(ele.querySelector("[class^='ChatMessageAuthorPanel_name']").textContent.split(":")[0].trim());
+			name = escapeHtml(ele.querySelector("[class^='VideoChat__ownerName']").textContent.split(":")[0].trim());
 		} catch(e){
 		}
 		
@@ -100,7 +100,7 @@
 
 		var msg="";
 		try {
-			msg = getAllContentNodes(ele.querySelector("[data-role='messageMainContent']")).trim();
+			msg = getAllContentNodes(ele.querySelector("[class^='VideoChat__messageText']")).trim();
 		} catch(e){
 		}
 		
@@ -196,7 +196,7 @@
 
 	setInterval(function(){
 		try {
-			var container = document.querySelector("[class^='Chat_root']");
+			var container = document.querySelector("[class^='VideoChat__in']");
 			if (!container.marked){
 				container.marked=true;
 
