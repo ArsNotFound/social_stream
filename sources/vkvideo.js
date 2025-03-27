@@ -192,6 +192,15 @@
 	
 	console.log("social stream injected");
 
+	setInterval(function(){
+		try {
+			var newMsgBtn = document.querySelector("[class='mv_chat_new_messages_btn']");
+			4
+			if (newMsgBtn !== null) {
+				newMsgBtn.click()
+			}
+		}catch (e){}
+	}, 1000);
 
 
 	setInterval(function(){
@@ -201,6 +210,8 @@
 				container.marked=true;
 
 				console.log("CONNECTED chat detected");
+
+
 
 				setTimeout(function(){
 					onElementInserted(container);
